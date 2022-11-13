@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "506587495419",
+    "firebase_url": "https://insuranceclaimhack-default-rtdb.firebaseio.com",
+    "project_id": "insuranceclaimhack",
+    "storage_bucket": "insuranceclaimhack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506587495419:android:72eabf1f6ebb297418e95e",
+        "android_client_info": {
+          "package_name": "com.example.insuranceclaimhack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506587495419-fn9infhfom4mk16tin2tfckp9re8ack2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbzc8Vnt8xJVrdGpdjgLM2Oftm_BJ-RBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506587495419-fn9infhfom4mk16tin2tfckp9re8ack2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
