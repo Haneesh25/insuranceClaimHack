@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Linear Layout with vertical orientation and other properties -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".claimTinderViewer">
+
+    <!-- TextView for heading -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:text="Name"
+        android:paddingBottom="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:id="@+id/category"
+        android:textSize="15dp"
+        android:paddingBottom="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Claim Name"
+        android:textSize="30dp"
+        android:id="@+id/claimName"
+        android:paddingBottom="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Claim Description"
+        android:id="@+id/claimDesc"
+        android:paddingBottom="100dp"
+        android:textSize="15dp"
+        android:textAlignment="center"/>
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout03"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Connect?"
+
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="30dp" ></TextView>>
+        <TextView
+            android:id="@+id/connectNumber"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="1234567890"
+            android:visibility="invisible"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" ></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:shadowColor="#373535"
+
+            android:text="x"
+            android:textColorHighlight="#5C1111"
+            app:rippleColor="@color/black"
+            app:strokeColor="#881414"></Button>
+
+        <Button
+            android:id="@+id/Button03"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="✔">
+
+        </Button>>
+    </LinearLayout>
+
+
+</LinearLayout>
+

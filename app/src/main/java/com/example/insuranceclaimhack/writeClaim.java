@@ -36,7 +36,7 @@ import java.util.Map;
 public class writeClaim extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     private static final String TAG = "";
-    private EditText nameTextView, claimNameTextView,claimDescTextView;
+    private EditText nameTextView, claimNameTextView,claimDescTextView,phoneTextView;
     private Spinner categorySpinner;
     private Button claimBtn;
     private ProgressBar progressBar;
@@ -49,6 +49,7 @@ public class writeClaim extends AppCompatActivity implements AdapterView.OnItemS
         setContentView(R.layout.activity_write_claim);
         db = FirebaseFirestore.getInstance();
         nameTextView = findViewById(R.id.name);
+        phoneTextView = findViewById(R.id.phone);
         claimNameTextView = findViewById(R.id.claimName);
         claimDescTextView = findViewById(R.id.claimDesc);
 
@@ -71,8 +72,9 @@ public class writeClaim extends AppCompatActivity implements AdapterView.OnItemS
 
     private void addClaim() {
         progressBar.setVisibility(View.VISIBLE);
-        String name, claimName, claimDesc, category;
+        String name, phone, claimName, claimDesc, category;
         name = nameTextView.getText().toString();
+        phone = phoneTextView.getText().toString();
         claimName = claimNameTextView.getText().toString();
         claimDesc = claimDescTextView.getText().toString();
         category = categorySpinner.getSelectedItem().toString();
@@ -87,6 +89,7 @@ public class writeClaim extends AppCompatActivity implements AdapterView.OnItemS
 
         Map<String, String> user = new HashMap<>();
         user.put("Name", name);
+        user.put("Phone",phone);
         user.put("Claim Name", claimName);
         user.put("Claim Description", claimDesc);
         user.put("Category", category);
@@ -106,7 +109,9 @@ public class writeClaim extends AppCompatActivity implements AdapterView.OnItemS
                         progressBar.setVisibility(View.GONE);
                         Intent intent
                                 = new Intent(writeClaim.this,
-                                claimViewer.class);
+                                claimTinderViewer.class);
+
+                        intent.putExtra("category" , category);
                         startActivity(intent);
                     }
                 })
